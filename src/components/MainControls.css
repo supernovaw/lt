@@ -1,0 +1,84 @@
+.MainControls {
+  flex: 1;
+  text-align: start;
+  padding: 8px;
+  position: relative;
+}
+
+.MainControls .DropdownSection {
+  position: relative;
+  display: inline-block;
+}
+
+.MainControls .DropdownSection>button.highlight {
+  text-shadow: 0 0 2px white;
+}
+
+.MainControls .DropdownSection>div {
+  position: absolute;
+  overflow: hidden;
+  background-color: #111;
+  width: 500px;
+  height: 34px;
+  transform-origin: 0 0;
+  transition: .15s ease;
+}
+
+.MainControls .DropdownSection>div.hide {
+  height: 0;
+  opacity: 0;
+  transform: scaleY(0.2);
+  user-select: none;
+}
+
+.MainControls>.popup {
+  position: absolute;
+  border-radius: 15px;
+  left: 150px;
+  top: 50px;
+  right: 150px;
+  bottom: 50px;
+  backdrop-filter: blur(2px);
+  background-color: #22222277;
+  overflow: hidden;
+
+  transition: 0.15s ease-out;
+  transform-origin: 50% 10%;
+  transform: scale(.95) translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.MainControls>.popup.shown {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.MainControls>.popup>.popup-container {
+  overflow-y: auto;
+  max-height: calc(100% - 40px);
+  padding: 20px;
+}
+
+.MainControls>.popup>.close-button {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02LjIyNTY2IDQuODEwOTZDNS44MzUxNCA0LjQyMDQ0IDUuMjAxOTcgNC40MjA0NCA0LjgxMTQ1IDQuODEwOTZDNC40MjA5MiA1LjIwMTQ4IDQuNDIwOTIgNS44MzQ2NSA0LjgxMTQ1IDYuMjI1MTdMMTAuNTg2MiAxMS45OTk5TDQuODExNTEgMTcuNzc0NkM0LjQyMDk4IDE4LjE2NTEgNC40MjA5OCAxOC43OTgzIDQuODExNTEgMTkuMTg4OEM1LjIwMjAzIDE5LjU3OTMgNS44MzUyIDE5LjU3OTMgNi4yMjU3MiAxOS4xODg4TDEyLjAwMDQgMTMuNDE0MUwxNy43NzUxIDE5LjE4ODhDMTguMTY1NiAxOS41NzkzIDE4Ljc5ODggMTkuNTc5MyAxOS4xODkzIDE5LjE4ODhDMTkuNTc5OCAxOC43OTgzIDE5LjU3OTggMTguMTY1MSAxOS4xODkzIDE3Ljc3NDZMMTMuNDE0NiAxMS45OTk5TDE5LjE4OTMgNi4yMjUxN0MxOS41Nzk5IDUuODM0NjUgMTkuNTc5OSA1LjIwMTQ4IDE5LjE4OTMgNC44MTA5NkMxOC43OTg4IDQuNDIwNDQgMTguMTY1NyA0LjQyMDQ0IDE3Ljc3NTEgNC44MTA5NkwxMi4wMDA0IDEwLjU4NTdMNi4yMjU2NiA0LjgxMDk2WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
+}
+
+.ActivitiesList>div {
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: .15s ease-out;
+  max-width: 300px;
+}
+
+.ActivitiesList>div:hover {
+  background-color: #5552;
+}
